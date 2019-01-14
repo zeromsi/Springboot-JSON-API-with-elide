@@ -3,6 +3,6 @@
  */
 
 @Include(rootLevel=true)
-package com.matthewcasperson.elidetest.data;
+package com.olm.data;
 
 import com.yahoo.elide.annotation.Include;

@@ -1,4 +1,4 @@
-package com.matthewcasperson.elidetest;
+package com.olm;
 
 import com.yahoo.elide.Elide;
 

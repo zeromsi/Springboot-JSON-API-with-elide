@@ -1,4 +1,4 @@
-package com.matthewcasperson.elidetest;
+package com.olm;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

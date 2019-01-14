@@ -1,4 +1,4 @@
-package com.matthewcasperson.elidetest;
+package com.olm;
 
 import com.yahoo.elide.Elide;
 import com.yahoo.elide.ElideResponse;
@@ -22,12 +22,12 @@ import javax.ws.rs.core.MultivaluedMap;
 import java.util.Map;
 
 /**
- * The rest interface to DZone and other services
+ * The rest interface for services
  */
 @RestController
-public class ElideTest {
+public class services {
 
-	private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(ElideTest.class);
+	private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(services.class);
 
 	@Autowired
 	private EntityManagerFactory emf;
@@ -44,7 +44,7 @@ public class ElideTest {
 
 	@CrossOrigin(origins = "*")
 	@RequestMapping(method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE, value = { "/{entity}",
-			"/{entity}/{id}/relationships/{entity2}", "/{entity}/{id}/{child}", "/{entity}/{id}" })
+			"/{entity}/{id}/relationships/{entity2}", "/{entity}/{id}/{child}", "/{entity}/{id}", "/{entity}/findAll" })
 	@Transactional
 	public String jsonApiGet(@RequestParam final Map<String, String> allRequestParams,
 			final HttpServletRequest request) {
